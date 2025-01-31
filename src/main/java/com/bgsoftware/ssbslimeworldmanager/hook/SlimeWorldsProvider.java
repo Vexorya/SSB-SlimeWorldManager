@@ -260,6 +260,7 @@ public class SlimeWorldsProvider implements LazyWorldsProvider {
         this.module.getSlimeAdapter().generateWorld(slimeWorld);
         bukkitWorld = Bukkit.getWorld(slimeWorld.getName());
         Bukkit.getPluginManager().callEvent(new WorldLoadEvent(bukkitWorld));
+        bukkitWorld.setGameRuleValue("showDeathMessages", "false");
         bukkitWorld.setGameRuleValue("keepInventory", "true");
         bukkitWorld.setGameRuleValue("announceAdvancements", "false");
         bukkitWorld.setGameRuleValue("showDeathMessages", "false");
